@@ -16,5 +16,17 @@ public class CpyingArrays {
     	Arrays.fill(k, 103);
     	System.arraycopy(i, 0, k, 0, k.length);
     	System.out.println("k = " +Arrays.toString(k));
-    }
+    	Arrays.fill(k, 103);
+    	System.arraycopy(k, 0, i, 0, k.length);
+    	System.out.println("i = " + Arrays.toString(i));
+    	Integer[] u=new Integer[10];
+    	Integer[] v=new Integer[5];
+    	Arrays.fill(u, new Integer(47));
+    	Arrays.fill(v, new Integer(99));
+    	System.out.println("u = "+Arrays.toString(u));
+    	System.out.println("v = " + Arrays.toString(v));
+    	System.arraycopy(v, 0, u, u.length/2, v.length);
+    	System.out.println("u = "+Arrays.toString(u));
+   
+     }
 }
