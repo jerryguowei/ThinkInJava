@@ -2,6 +2,7 @@ package containers;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -45,17 +46,54 @@ public class Lists {
 	public static void iterManipulation(List<String> a){
 		ListIterator<String> it= a.listIterator();
 		it.add("47");
-		System.out.println(a);
-	    System.out.println(it.next());
+	    it.next();
 	    it.remove();
-	    System.out.println(a);
+	   
 	    it.next();
 	    it.set("47");
-	    System.out.println(a);
+	    
+	}
+	public static void testVisual(List <String> a){
+		System.out.println(a);
+		List<String> b=Countries.names(25);
+		System.out.println("b = " + b );
+		a.addAll(b);
+		a.addAll(b);
+		System.out.println(a);
+		ListIterator<String> x=a.listIterator(a.size()/2);
+		x.add("one");
+		System.out.println(a);
+		System.out.println(x.next());
+		x.set("x");
+		System.out.println(a);
+		x=a.listIterator(a.size());
+		while(x.hasPrevious())
+			System.out.println(x.previous() + " ");
+		System.out.println();
+		System.out.println("testVisual finished");
+	}
+	public static void testLinkedList(){
+		LinkedList<String> ll=new LinkedList<String>();
+		ll.addAll(Countries.names(25));
+		System.out.println(ll);
+		ll.addFirst("one");
+		ll.addFirst("two");
+		System.out.println(ll);
+		System.out.println(ll.getFirst());
+		System.out.println(ll.removeFirst());
+		System.out.println(ll.removeFirst());
+		System.out.println(ll.removeLast());
+		System.out.println(ll);
 	}
 	public static void main(String[] args){
-		List<String> a= new ArrayList<String>(Countries.names(5));
-		iterManipulation(a);
+		basicTest(new LinkedList<String>(Countries.names(25)));
+		basicTest(new ArrayList<String>(Countries.names(25)));
+		iterMotion(new LinkedList<String>(Countries.names(25)));
+		iterMotion(new ArrayList<String>(Countries.names(25)));
+		iterManipulation(new LinkedList<String>(Countries.names(25)));
+//		iterManipulation(new ArrayList<String>(Countries.names(25)));
+//		testVisual(new LinkedList<String>(Countries.names(25)));
+		testLinkedList();
 	}
-
+	
 }
