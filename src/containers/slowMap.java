@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -36,11 +37,12 @@ public class slowMap<K,V> extends AbstractMap<K, V> {
 		return set;
 	}
 	public static void main(String[] args){
-		slowMap<String, String> m=new slowMap<String,String>();
-		m.putAll(Countries.capitals(15));
-		System.out.println(m);
-		System.out.println(m.get("BULGARIA"));
-		System.out.println(m.entrySet());
+//		slowMap<String, String> m=new slowMap<String,String>();
+//		m.putAll(Countries.capitals(15));
+//		System.out.println(m);
+//		System.out.println(m.get("BULGARIA"));
+//		System.out.println(m.entrySet());
+		Maps.test(new slowMap<Integer,String>());
 	}
 
 }
