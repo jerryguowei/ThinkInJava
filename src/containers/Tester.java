@@ -78,7 +78,8 @@ public class Tester<C> {
 				long duration=System.nanoTime()-start;
 				long timePerRep=duration/reps;
 				System.out.format(numberField(), timePerRep);
-			}System.out.println();
+			}
+			System.out.println();
 			
 		}
 	}
