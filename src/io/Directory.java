@@ -52,6 +52,7 @@ public class Directory {
     	static TreeInfo recurseDirs(File startDir,String regex){
     		TreeInfo result=new TreeInfo();
     		for(File item:startDir.listFiles()){
+    		
     			if(item.isDirectory()){
     				result.dirs.add(item);
     				result.addAll(recurseDirs(item, regex));
@@ -67,6 +68,7 @@ public class Directory {
         	else 
         		for(String arg:args)
         			System.out.println(walk(arg));
+                 
          }
 
 }
