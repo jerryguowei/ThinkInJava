@@ -26,6 +26,7 @@ public class Directory {
     	@Override
 		public Iterator<File> iterator() {
 			return files.iterator();
+		
 		}
     	void addAll(TreeInfo other){
     		files.addAll(other.files);
