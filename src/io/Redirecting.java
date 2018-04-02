@@ -16,7 +16,7 @@ public class Redirecting {
 		PrintStream out=new PrintStream(new BufferedOutputStream(new FileOutputStream("test.out")));
 		System.setIn(in);
 		System.setOut(out);
-		System.setErr(out);
+		System.setErr(out);  
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		String s;
 		while((s=br.readLine())!=null)
