@@ -8,9 +8,7 @@ public interface StringProcessor extends Processor{
 		  "she's made of wood" ; 
      static void main ( String [] args) { 
     	 // [3] 
-    	 Applicator. apply ( new Upcase (), S);
-    	 Applicator. apply ( new Downcase (), S);
-    	 Applicator. apply ( new Splitter (), S); 
+    	
     	 
      } 
      
