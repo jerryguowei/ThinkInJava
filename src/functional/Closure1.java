@@ -6,8 +6,7 @@ public class Closure1 {
   int i;
   IntSupplier makeFun(int x){
 	  int k=0;
-	   k++;
-	   
+	   k++;	   
 	  return ()->x+i++;
   }
 }
